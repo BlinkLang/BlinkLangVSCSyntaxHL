@@ -1,0 +1,35 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "source.blink",
+	"name": "Blink",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.blink",
+				"match": "\\b(and|class|else|fun|for|if|nil|or|print|return|super|this|true|var|while)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.blink",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.blink",
+					"match": "\\\\."
+				}
+			]
+		}
+	}
+}

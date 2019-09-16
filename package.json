@@ -1,0 +1,30 @@
+{
+    "name": "blinksyntaxhl",
+    "displayName": "BlinkSyntaxHL",
+    "description": "Blink Syntax Highlighting support for VSC",
+    "version": "1.0.0",
+    "publisher": "BlinkLang",
+    "engines": {
+        "vscode": "^1.38.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/BlinkLang/BlinkLangVSCSyntaxHL.git"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "blink",
+            "aliases": ["Blink", "blink"],
+            "extensions": [".blink"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "blink",
+            "scopeName": "source.blink",
+            "path": "./syntaxes/blink.tmLanguage.json"
+        }]
+    }
+}
